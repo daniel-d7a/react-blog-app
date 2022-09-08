@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Merriweather", serif;
+  --primary: #222831;
+  --secondary: #393e46;
+  --ternary: #eeeeee;
+  --off: #566fa1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--primary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* nav bar styles */
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  column-gap: 10px;
+  font-size: 1rem;
+  box-shadow: 0px 1px 21px -6px rgba(0, 0, 0, 0.8);
+  background-color: var(--secondary);
+}
+
+.nav a {
+  font-family: "Merriweather", serif;
+  color: var(--ternary);
+}
+
+.nav ul li:first-child {
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* blog card styles */
+
+.blog {
+  width: 60%;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 15px;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--secondary);
+  box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.8);
+  color: var(--ternary);
+}
+
+.blog h2 a {
+  color: var(--ternary);
+}
+
+.blog h2 {
+  margin-bottom: 15px;
+  width: 95%;
+}
+
+.blog .icon {
+  align-self: center;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.blog p {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.blog a {
+  color: black;
+}
+
+.tags ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.tags li {
+  border-radius: 20px;
+  padding: 3px 10px;
+  background-color: var(--off);
+  color: var(--ternary);
+}
+.tags li:not(:first-child) {
+  margin-left: 10px;
+}
+
+.tags {
+  margin-left: auto;
+}
+
+.reactions :not(span) {
+  cursor: pointer;
+}
+
+.reactions span {
+  margin: 0 10px;
+}
+
+.mainBlog {
+  color: var(--ternary);
+  background-color: var(--secondary);
+  padding: 20px;
+  width: 60%;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.8);
+}
+
+.mainBlog h1 {
+  margin-bottom: 10px;
+}
+.mainBlog .edit {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.mainBlog .edit span {
+  margin-right: 10px;
+  font-weight: 700;
+}
+.mainBlog .edit svg {
+  height: 1.3em;
+  width: 1.3em;
+  position: relative;
+  top: 3px;
+}
+.mainBlog .tags {
+  margin-bottom: 20px;
+}
+
+.mainBlog p {
+  margin-bottom: 20px;
+}
+
+.blogForm {
+  padding: 20px;
+  width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 20px auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  row-gap: 20px;
+  color: var(--ternary);
+  background-color: var(--secondary);
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.8);
 }
 
-.App-link {
-  color: #61dafb;
+.blogForm label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blogForm input,
+.blogForm textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: var(--primary);
+  color: var(--ternary);
+  border: initial;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.blogForm input:focus,
+.blogForm textarea:focus{
+  outline: 5px solid var(--off);
+  transition: all 0.3s ease;
+}
+
+
+.blogForm textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.blogForm ::placeholder{
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--ternary);
+}
+
+.blogForm button {
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+  width: 40%;
+  border-radius: 4px;
+  border: none;
+  align-self: center;
+  margin-top: 10px;
+  background-color: var(--off);
+  color: var(--ternary);
+  transition: all 0.3s ease;
+}
+
+.blogForm button:hover {
+  background-color: var(--ternary);
+  transition: all 0.3s ease;
+  color: black;
 }
