@@ -45,19 +45,6 @@
         "counter": 21,
         "state": "up"
       }
-    },
-    {
-      "title": "my first blog",
-      "body": "asdffgsdfas",
-      "userId": 2,
-      "tags": [
-        "magical"
-      ],
-      "reactions": {
-        "counter": 0,
-        "state": "default"
-      },
-      "id": 4
     }
   ]
 }
