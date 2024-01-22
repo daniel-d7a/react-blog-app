@@ -1,22 +1,28 @@
-# React + Tailwind CSS Landing Page
+# React Blog App
 
 ## Overview
 
-This project is a small and responsive landing page built using React for the frontend and Tailwind CSS for styling. It's a lightweight template that can be easily customized for various purposes.
+This blog app is a simple web application built with React, incorporating client-side routing using React Router. It utilizes React Select for multi-select functionality and allows users to perform CRUD operations on blogs, including creating, reading, updating, and deleting posts. The app communicates with a JSON server using the Fetch API, and a JSON server file is employed to store the blog data.
 
 ## Features
 
-- **Responsive Design:** The landing page is designed to be fully responsive, ensuring a seamless experience across various devices and screen sizes.
+- **Made with React:** The entire front end is developed using React, providing a dynamic and responsive user interface.
 
-- **React Components:** The project is structured with modular React components, making it easy to manage and extend.
+- **Client-side Routing:** Utilizes React Router for seamless navigation and a single-page application experience.
 
-- **Tailwind CSS:** Styling is done using Tailwind CSS, a utility-first CSS framework, providing a convenient way to style components.
+- **React Select for Multi-select:** Implements React Select to enable users to select multiple items efficiently.
+
+- **CRUD Operations:** Users can perform Create, Read, Update, and Delete operations on blogs for a comprehensive content management system.
+
+- **Fetch API Integration:** Utilizes the Fetch API to communicate with a JSON server, enabling smooth data retrieval and updates.
+
+- **JSON Server Data Storage:** The app relies on a JSON server file to store and manage blog data.
 
 ## Getting Started
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/daniel-d7a/marketing-landingpage.git
+   git clone https://github.com/daniel-d7a/react-blog-app
    cd your-repo
 
 2. **Install Dependencies:**
@@ -25,13 +31,19 @@ This project is a small and responsive landing page built using React for the fr
 
 3. **Run the Development Server:**
    ```bash
-   npm run dev
+   npm run start
 This will start the development server, and you can view the landing page at http://localhost:3000 in your browser
 
-4. **Open in Your Browser:**
+4. **Run the JSON Server:**
+This will start Start the JSON server to simulate a backend. Open a new terminal window and
+
+   ```bash
+   npm run json-server -p 3001
+
+5. **Open in Your Browser:**
 - Open your web browser.
 - Navigate to http://localhost:3000.
-- You should see the landing page. Feel free to explore and interact with it locally.
+- You should see the blog home page. Feel free to explore and interact with it locally.
 
 ## License
 
